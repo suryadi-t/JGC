@@ -1,1 +1,1 @@
-# JGC
+# Jacobian Granger Causality
