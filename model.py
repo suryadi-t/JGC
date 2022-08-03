@@ -237,7 +237,7 @@ class JGC():
              self.train_new(X,y,lam,target_index,seed=i)
         var_score = self.var_scores[target_index][0] #take scores from first iteration
         lag_score = self.lag_scores[target_index][0] 
-        lag_binary, var_binary = self.var_selection_one_target(target_index,self.sd_cutoff)
+        lag_binary, var_binary = self.var_selection_one_target(target_index)
         return var_binary, var_score, lag_binary, lag_score
     
     def infer_GC_all(self, data:np.ndarray, lam:float, verbose=True, parallelize=False, processes=8):
